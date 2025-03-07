@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import CarUpdateView
 
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('car/<int:pk>/update/', CarUpdateView.as_view(), name='car_update'),
 ]
